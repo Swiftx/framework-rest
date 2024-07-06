@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- 模块信息 -->
+    <groupId>top.swiftx.framework</groupId>
+    <artifactId>rest-core</artifactId>
+    <version>0.0.1</version>
+    <packaging>jar</packaging>
+
+    <!-- 描述信息 -->
+    <name>SpringBoot REST API 标准化扩展组件基础对象</name>
+    <description>只需要数据结构引用此包</description>
+    <url>https://github.com/swiftx/framework-rest</url>
+
+    <!-- 开源协议 -->
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>https://opensource.org/license/mit</url>
+        </license>
+    </licenses>
+
+    <!-- 开发人员 -->
+    <developers>
+        <developer>
+            <name>胡永强</name>
+            <email>odaytudio@gmail.com</email>
+            <organization>swiftx</organization>
+            <organizationUrl>https://github.com/swiftx</organizationUrl>
+        </developer>
+    </developers>
+
+    <!-- 仓库信息 -->
+    <scm>
+        <connection>scm:git:git://github.com/swiftx/framework-rest.git</connection>
+        <developerConnection>scm:git:ssh://github.com:swiftx/framework-rest.git</developerConnection>
+        <url>https://github.com/swiftx/framework-rest/tree/main</url>
+    </scm>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>3.3.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>3.7.0</version>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>3.2.4</version>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+
+</project>
