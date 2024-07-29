@@ -6,12 +6,12 @@
     <!-- 模块信息 -->
     <groupId>top.swiftx.framework</groupId>
     <artifactId>rest-core</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
     <packaging>jar</packaging>
 
     <!-- 描述信息 -->
-    <name>SpringBoot REST API 标准化扩展组件基础对象</name>
-    <description>只需要数据结构引用此包</description>
+    <name>core</name>
+    <description>SpringBoot REST API 标准化扩展组件基础对象</description>
     <url>https://github.com/swiftx/framework-rest</url>
 
     <!-- 开源协议 -->
@@ -39,6 +39,55 @@
         <url>https://github.com/swiftx/framework-rest/tree/main</url>
     </scm>
 
+    <!-- 项目属性 -->
+    <properties>
+        <java.version>17</java.version>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <!-- 依赖版本 -->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>1.18.32</version>
+            </dependency>
+            <dependency>
+                <groupId>io.swagger.core.v3</groupId>
+                <artifactId>swagger-annotations-jakarta</artifactId>
+                <version>2.2.22</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-web</artifactId>
+                <version>6.1.11</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <!-- 项目依赖 -->
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>io.swagger.core.v3</groupId>
+            <artifactId>swagger-annotations-jakarta</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <optional>true</optional>
+        </dependency>
+    </dependencies>
+
+    <!-- 部署插件 -->
     <build>
         <plugins>
             <plugin>
@@ -61,6 +110,7 @@
                 <executions>
                     <execution>
                         <id>attach-javadocs</id>
+                        <phase>package</phase>
                         <goals>
                             <goal>jar</goal>
                         </goals>
@@ -83,6 +133,4 @@
             </plugin>
         </plugins>
     </build>
-
-
 </project>

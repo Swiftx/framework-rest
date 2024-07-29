@@ -7,13 +7,12 @@
     <groupId>top.swiftx.framework</groupId>
     <artifactId>rest</artifactId>
     <packaging>pom</packaging>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
     <name>SpringBoot REST API 标准化扩展组件</name>
 
     <!-- 模块声明 -->
     <modules>
         <module>core</module>
         <module>starter</module>
-        <module>debug</module>
     </modules>
 </project>
